@@ -15,3 +15,7 @@ build/*
 _site/
 *.css
 !petclinic.css
+advisor
+advisor-cli.tar
+spring-server.jar
+.advisor/*

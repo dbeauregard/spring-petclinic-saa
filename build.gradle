@@ -11,7 +11,7 @@ version = '2.7.3'
 sourceCompatibility = '11'
 
 repositories {
-  mavenCentral()
+  mavenCentral()  
 }
 
 ext.webjarsFontawesomeVersion = "4.7.0"
@@ -37,4 +37,14 @@ dependencies {
 
 tasks.named('test') {
   useJUnitPlatform()
+}
+
+task listrepos {
+    doLast {
+        println "Repositories:"
+        project.repositories.each { println "Name: " + it.name + "; url: " + it.url }
+        println ""
+        println "Plugin Repositories:"
+        gradle.settings.pluginManagement.repositories.each { println "Name: " + it.name + "; url: " + it.url }
+   }
 }

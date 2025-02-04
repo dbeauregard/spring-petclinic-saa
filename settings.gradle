@@ -1,1 +1,32 @@
+// pluginManagement {
+//   repositories {
+//       mavenCentral()
+//       mavenLocal()
+//       gradlePluginPortal()
+//       maven {         
+//         name = 'spring-enterprise-subscription'
+//         url = uri("https://packages.broadcom.com/artifactory/spring-enterprise")
+//       }
+//   }
+// }
+
+// dependencyResolutionManagement {
+//   repositories {
+//     mavenCentral()
+//     mavenLocal()
+//     gradlePluginPortal()
+//     // maven {
+//     //   name = 'spring-enterprise-subscription'
+//     //   url "https://packages.broadcom.com/artifactory/spring-enterprise"
+//     // //   credentials {
+//     // //         username ""
+//     // //         password ""
+//     // //     }
+//     // //   authentication {
+//     // //     basic(BasicAuthentication)
+//     // //     }
+//     // }
+//   }
+// }
+
 rootProject.name = 'spring-petclinic'
