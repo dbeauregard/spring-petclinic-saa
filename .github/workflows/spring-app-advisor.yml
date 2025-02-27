@@ -27,18 +27,19 @@ jobs:
       - name: find stuff
         if: always()
         run: |
-          pwd
-          ls
-          ls .advisor
-          ls -la /home/runner/work
-          ls -la /home/runner/work/spring-petclinic-saa
-          ls -la /home/runner/work/spring-petclinic-saa/spring-petclinic-saa
-          ls -la /usr/local/bin
+          # pwd
+          # ls
+          # ls .advisor
+          # ls -la /home/runner/work
+          # ls -la /home/runner/work/spring-petclinic-saa
+          # ls -la /home/runner/work/spring-petclinic-saa/spring-petclinic-saa
+          # ls -la /usr/local/bin
+          ls ${{ github.workspace }}/.advisor/
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: SAA Logs
-          path: .advisor/**/*
+          path: ${{ github.workspace }}/.advisor/**/*
 
         
