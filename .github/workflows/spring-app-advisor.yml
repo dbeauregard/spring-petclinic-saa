@@ -23,19 +23,7 @@ jobs:
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
           email: ${{ vars.EMAIL }}
-          build_tool: gradlew
-      - name: find stuff
-        if: always()
-        run: |
-          # pwd
-          # ls -la
-          # ls .advisor
-          # ls .advisor/errors
-          # ls -la /home/runner/work
-          # ls -la /home/runner/work/spring-petclinic-saa
-          # ls -la /home/runner/work/spring-petclinic-saa/spring-petclinic-saa
-          # ls -la /usr/local/bin
-          ls ${{ github.workspace }}/.advisor/errors
+          build_tool: gradle
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
