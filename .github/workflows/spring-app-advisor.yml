@@ -28,14 +28,14 @@ jobs:
         if: always()
         run: |
           # pwd
-          ls -la
-          ls .advisor
+          # ls -la
+          # ls .advisor
           # ls .advisor/errors
           # ls -la /home/runner/work
           # ls -la /home/runner/work/spring-petclinic-saa
           # ls -la /home/runner/work/spring-petclinic-saa/spring-petclinic-saa
           # ls -la /usr/local/bin
-          ls ${{ github.workspace }}/.advisor/
+          ls ${{ github.workspace }}/.advisor/errors
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
