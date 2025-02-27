@@ -17,12 +17,13 @@ jobs:
           distribution: 'liberica'
           java-version: '21'
       - name: Run Spring Application Advisor
-        uses: dbeauregard/spring-app-advisor-action@v1.1.4
+        uses: dbeauregard/spring-app-advisor-action@v1.1.5
         with:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
           email: ${{ vars.EMAIL }}
+          build_tool: gradlew
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
