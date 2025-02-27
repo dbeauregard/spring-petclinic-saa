@@ -22,3 +22,4 @@ jobs:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
+          email: ${{ vars.EMAIL }}
