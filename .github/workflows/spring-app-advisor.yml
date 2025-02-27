@@ -17,7 +17,7 @@ jobs:
           distribution: 'liberica'
           java-version: '21'
       - name: Run Spring Application Advisor
-        uses: dbeauregard/spring-app-advisor-action@v1.1.3
+        uses: dbeauregard/spring-app-advisor-action@v1.1.4
         with:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,4 +27,11 @@ jobs:
         if: always()
         run: |
           cat .advisor/errors/*.log
+      - name: Upload Checkstyle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CheckStyle Report
+          path: .advisor/errors/*.log
+
         
