@@ -30,7 +30,6 @@ jobs:
           pwd
           ls
           ls .advisor
-          ls -la errors
           ls -la /home/runner/work
           ls -la /home/runner/work/spring-petclinic-saa
           ls -la /home/runner/work/spring-petclinic-saa/spring-petclinic-saa
