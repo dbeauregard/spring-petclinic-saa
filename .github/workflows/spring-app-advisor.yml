@@ -24,6 +24,7 @@ jobs:
           app_advisor_server: ${{ vars.SAA_SERVER}}
           email: ${{ vars.EMAIL }}
       - name: Show Logs
+        if: always()
         run: |
           cat .advisor/errors/*.log
         
