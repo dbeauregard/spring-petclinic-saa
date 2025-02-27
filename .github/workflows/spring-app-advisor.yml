@@ -25,6 +25,7 @@ jobs:
           email: ${{ vars.EMAIL }}
           build_tool: gradlew
       - name: find stuff
+        if: always()
         run: |
           pwd
           ls
