@@ -23,15 +23,11 @@ jobs:
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
           email: ${{ vars.EMAIL }}
-      - name: Show Logs
-        if: always()
-        run: |
-          cat .advisor/errors/*.log
-      - name: Upload Checkstyle
+      - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: CheckStyle Report
-          path: .advisor/errors/*.log
+          name: SAA Logs
+          path: .advisor/**/*
 
         
