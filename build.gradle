@@ -8,7 +8,7 @@ apply plugin: 'java'
 
 group = 'org.springframework.samples'
 version = '2.7.3'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 repositories {
   mavenCentral()  
@@ -32,7 +32,8 @@ dependencies {
   runtimeOnly 'mysql:mysql-connector-java'
   runtimeOnly 'org.postgresql:postgresql'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
-  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+  implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
