@@ -24,6 +24,11 @@ jobs:
           app_advisor_server: ${{ vars.SAA_SERVER}}
           email: ${{ vars.EMAIL }}
           build_tool: gradlew
+      - name: find stuff
+        run: |
+          pwd
+          ls
+          ls .advisor
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v4
