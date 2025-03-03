@@ -26,4 +26,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Build with Maven Wrapper
-        run: ./mvnw -B package # or verify and/or -Dcheckstyle.skip
+        run: ./mvnw -B package # or verify and/or -Dcheckstyle.skip and or maven (not wrapper)
