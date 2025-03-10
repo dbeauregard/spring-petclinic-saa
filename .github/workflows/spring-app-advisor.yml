@@ -18,13 +18,19 @@ jobs:
         with:
           distribution: 'liberica'
           java-version: '21'
+          # cache: maven
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-disabled: false
+          cache-read-only: false
       - name: Run Spring Application Advisor
         uses: dbeauregard/spring-app-advisor-action@v1.1.9
         with:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
-          email: ${{ vars.EMAIL }}
+          email: ${{ secrets.EMAIL }}
           build_tool: gradle
       - name: Upload SAA Logs
         if: always()
