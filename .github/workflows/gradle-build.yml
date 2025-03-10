@@ -24,7 +24,7 @@ jobs:
         with:
           java-version: ${{matrix.java}}
           distribution: 'adopt'
-          cache: maven
+          # cache: maven
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build with Gradle
