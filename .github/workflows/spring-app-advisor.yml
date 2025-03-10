@@ -19,6 +19,11 @@ jobs:
           distribution: 'liberica'
           java-version: '21'
           cache: gradle
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-disabled: false
+          cache-read-only: false
       - name: Run Spring Application Advisor
         uses: dbeauregard/spring-app-advisor-action@v1.1.9
         with:
