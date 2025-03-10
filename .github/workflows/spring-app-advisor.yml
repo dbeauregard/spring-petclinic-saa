@@ -24,7 +24,7 @@ jobs:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
           app_advisor_server: ${{ vars.SAA_SERVER}}
-          email: ${{ vars.EMAIL }}
+          email: ${{ secrets.EMAIL }}
           build_tool: gradle
       - name: Upload SAA Logs
         if: always()
