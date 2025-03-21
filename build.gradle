@@ -1,6 +1,6 @@
 plugins {
-  id 'org.springframework.boot' version '2.7.3'
-  id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+  id 'org.springframework.boot' version '3.0.13'
+  id 'io.spring.dependency-management' version '1.1.7'
   id 'java'
 }
 
@@ -29,10 +29,10 @@ dependencies {
   runtimeOnly "org.webjars.npm:font-awesome:${webjarsFontawesomeVersion}"
   runtimeOnly 'org.ehcache:ehcache'
   runtimeOnly 'com.h2database:h2'
-  runtimeOnly 'mysql:mysql-connector-java'
+  runtimeOnly 'com.mysql:mysql-connector-j'
   runtimeOnly 'org.postgresql:postgresql'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
-  implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3"
+  implementation "jakarta.xml.bind:jakarta.xml.bind-api:4.0.2"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
