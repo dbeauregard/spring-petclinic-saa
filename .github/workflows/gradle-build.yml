@@ -30,5 +30,6 @@ jobs:
         with:
           cache-disabled: false
           cache-read-only: false
+          gradle-version: '8.14'
       - name: Build with Gradle
         run: gradle build
