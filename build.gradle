@@ -11,7 +11,15 @@ version = '2.7.3'
 sourceCompatibility = '11'
 
 repositories {
-  mavenCentral()
+      mavenCentral()
+      maven {
+          credentials {
+              // !!! Must be set in ~/.gradle/gradle.properties !!!
+              username = project.findProperty('AVGO_REPO_USER')
+              password = project.findProperty('AVGO_REPO_PASSWORD')
+          }
+          url = uri("https://packages.broadcom.com/artifactory/spring-enterprise")
+      }
 }
 
 ext.webjarsFontawesomeVersion = "4.7.0"
