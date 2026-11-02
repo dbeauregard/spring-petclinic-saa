@@ -38,5 +38,11 @@ jobs:
         with:
           name: SAA Logs
           path: ${{ github.workspace }}/.advisor/errors/*.log
+      - name: Upload Tanzu Logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: SAA Logs
+          path: ${{ github.workspace }}/.tanzu/errors/*.log
 
         
