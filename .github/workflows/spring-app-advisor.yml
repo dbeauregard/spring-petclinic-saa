@@ -26,7 +26,7 @@ jobs:
           cache-read-only: false
           gradle-version: '8.14'
       - name: Run Spring Application Advisor
-        uses: dbeauregard/spring-app-advisor-action@v1.1.10
+        uses: dbeauregard/spring-app-advisor-action@v1.7.1
         with:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
