@@ -31,7 +31,7 @@ jobs:
           artifactory_token: ${{ secrets.ARTIFACTORYTOKEN }}
           git_token: ${{ secrets.GITHUB_TOKEN }}
           email: ${{ secrets.EMAIL }}
-          build_tool: gradlew
+          build_tool: mvn
       - name: Upload SAA Logs
         if: always()
         uses: actions/upload-artifact@v6
